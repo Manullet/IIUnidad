@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Examen2_Manuel_Figueroa_20201001811
+namespace Datos
 {
-    internal class Entidad
+    internal class UsuarioDatos
     {
     }
 }
