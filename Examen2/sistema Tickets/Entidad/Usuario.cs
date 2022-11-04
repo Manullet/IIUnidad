@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entidad
 {
-    internal class Usuario
+    public class Usuario
     {
+
+        public string? Nombre { get; set; }
+        public string? Clave { get; set; }
+
     }
 }
