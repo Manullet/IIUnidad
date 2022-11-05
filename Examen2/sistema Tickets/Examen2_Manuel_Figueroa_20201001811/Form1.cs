@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-
+using Datos1;
 
 namespace Examen2_Manuel_Figueroa_20201001811
 {
@@ -42,9 +41,9 @@ namespace Examen2_Manuel_Figueroa_20201001811
             if (valido)
             {
                 //mostrar si puede acceder 
-                //Bienvenido formulario = new Bienvenido();
+                Menu formulario = new Menu();
                 Hide();
-               // formulario.Show();
+                formulario.Show();
             }
             else
             {
@@ -55,9 +54,10 @@ namespace Examen2_Manuel_Figueroa_20201001811
 
         }
 
-
-
-
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            Close();    
+        }
     }
     }
 

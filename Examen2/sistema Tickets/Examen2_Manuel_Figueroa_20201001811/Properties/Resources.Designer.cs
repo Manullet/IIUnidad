@@ -169,5 +169,15 @@ namespace Examen2_Manuel_Figueroa_20201001811.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ticket {
+            get {
+                object obj = ResourceManager.GetObject("Ticket", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
