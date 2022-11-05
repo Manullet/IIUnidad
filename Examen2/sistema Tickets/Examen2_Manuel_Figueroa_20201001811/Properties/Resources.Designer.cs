@@ -63,6 +63,16 @@ namespace Examen2_Manuel_Figueroa_20201001811.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap business_deletethedatabase_exit_db_delete_busines_2346 {
+            get {
+                object obj = ResourceManager.GetObject("business_deletethedatabase_exit_db_delete_busines_2346", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap businessapplication_accept_ok_male_man_you_negocio_2311__2_ {
             get {
                 object obj = ResourceManager.GetObject("businessapplication_accept_ok_male_man_you_negocio_2311 (2)", resourceCulture);
@@ -86,6 +96,26 @@ namespace Examen2_Manuel_Figueroa_20201001811.Properties {
         internal static System.Drawing.Bitmap delete_delete_deleteusers_delete_male_user_maleclient_2348__2_ {
             get {
                 object obj = ResourceManager.GetObject("delete_delete_deleteusers_delete_male_user_maleclient_2348 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FONDO_DE_SOPORTE_TECNICO {
+            get {
+                object obj = ResourceManager.GetObject("FONDO-DE-SOPORTE-TECNICO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap image {
+            get {
+                object obj = ResourceManager.GetObject("image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,6 +153,16 @@ namespace Examen2_Manuel_Figueroa_20201001811.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logout_37127 {
+            get {
+                object obj = ResourceManager.GetObject("Logout_37127", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menu {
             get {
                 object obj = ResourceManager.GetObject("menu", resourceCulture);
@@ -146,6 +186,36 @@ namespace Examen2_Manuel_Figueroa_20201001811.Properties {
         internal static System.Drawing.Bitmap munu3 {
             get {
                 object obj = ResourceManager.GetObject("munu3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap receipt_cancel_icon_177356 {
+            get {
+                object obj = ResourceManager.GetObject("receipt_cancel_icon_177356", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save_37110 {
+            get {
+                object obj = ResourceManager.GetObject("Save_37110", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_find_database_16703 {
+            get {
+                object obj = ResourceManager.GetObject("search_find_database_16703", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

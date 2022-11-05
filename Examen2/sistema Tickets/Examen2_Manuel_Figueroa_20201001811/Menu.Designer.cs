@@ -29,36 +29,38 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnCelular = new System.Windows.Forms.Button();
+            this.BtnComputo = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtnTickets = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // BtnCelular
             // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(13, 204);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 55);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Reparación de Celulares";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnCelular.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCelular.Location = new System.Drawing.Point(13, 204);
+            this.BtnCelular.Name = "BtnCelular";
+            this.BtnCelular.Size = new System.Drawing.Size(201, 55);
+            this.BtnCelular.TabIndex = 0;
+            this.BtnCelular.Text = "Reparación de Celulares";
+            this.BtnCelular.UseVisualStyleBackColor = true;
+            this.BtnCelular.Click += new System.EventHandler(this.BtnCelular_Click);
             // 
-            // button2
+            // BtnComputo
             // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(239, 204);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(209, 55);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Reparación de Computo";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnComputo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnComputo.Location = new System.Drawing.Point(239, 204);
+            this.BtnComputo.Name = "BtnComputo";
+            this.BtnComputo.Size = new System.Drawing.Size(209, 55);
+            this.BtnComputo.TabIndex = 1;
+            this.BtnComputo.Text = "Reparación de Computo";
+            this.BtnComputo.UseVisualStyleBackColor = true;
+            this.BtnComputo.Click += new System.EventHandler(this.BtnComputo_Click);
             // 
             // pictureBox1
             // 
@@ -92,15 +94,16 @@
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             // 
-            // button3
+            // BtnTickets
             // 
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(471, 204);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(209, 55);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Tickets";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnTickets.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnTickets.Location = new System.Drawing.Point(471, 204);
+            this.BtnTickets.Name = "BtnTickets";
+            this.BtnTickets.Size = new System.Drawing.Size(209, 55);
+            this.BtnTickets.TabIndex = 5;
+            this.BtnTickets.Text = "Tickets";
+            this.BtnTickets.UseVisualStyleBackColor = true;
+            this.BtnTickets.Click += new System.EventHandler(this.BtnTickets_Click);
             // 
             // Menu
             // 
@@ -108,12 +111,12 @@
             this.BackgroundImage = global::Examen2_Manuel_Figueroa_20201001811.Properties.Resources.munu3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(692, 271);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.BtnTickets);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnComputo);
+            this.Controls.Add(this.BtnCelular);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -129,11 +132,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnCelular;
+        private System.Windows.Forms.Button BtnComputo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BtnTickets;
     }
 }

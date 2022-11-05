@@ -16,5 +16,18 @@ namespace Examen2_Manuel_Figueroa_20201001811
         {
             InitializeComponent();
         }
+
+        private void BtnMenu_Click(object sender, EventArgs e)
+        {
+
+
+
+
+
+            Menu formulario = new Menu();
+            Hide();
+            formulario.Show();
+
+        }
     }
 }
