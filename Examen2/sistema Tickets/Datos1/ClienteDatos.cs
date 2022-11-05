@@ -80,7 +80,7 @@ namespace Datos1
             bool elimino = false;
             try
             {
-                string sql = "DELETE FREOM cliente WHERE Nombre_Cliente=@Nombre_Cliente;";
+                string sql = "DELETE FROM cliente WHERE Codigo_Cliente=@Codigo_Cliente;";
 
                 using (MySqlConnection _conexion = new MySqlConnection(Conexion.Cadena))
                 {
@@ -88,7 +88,7 @@ namespace Datos1
                     using (MySqlCommand comando = new MySqlCommand(sql, _conexion))
                     {
                         comando.CommandType = System.Data.CommandType.Text;
-                        comando.Parameters.Add("@Nombre_Cliente", MySqlDbType.VarChar, 45).Value = nombre;
+                        comando.Parameters.Add("@Codigo_Cliente", MySqlDbType.VarChar, 45).Value = nombre;
                         await comando.ExecuteNonQueryAsync();
                         elimino = true;
                     }

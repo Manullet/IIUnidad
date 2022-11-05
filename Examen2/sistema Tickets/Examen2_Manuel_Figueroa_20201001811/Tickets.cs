@@ -20,10 +20,7 @@ namespace Examen2_Manuel_Figueroa_20201001811
         ClienteDatos cliente = new ClienteDatos();
 
 
-        private void TicketsFrom_Load(object sender, EventArgs e)
-        { 
-
-        }
+        
 
         private async void LlenarDataGrid()
         {
@@ -39,9 +36,9 @@ namespace Examen2_Manuel_Figueroa_20201001811
 
         private async void button2_Click(object sender, EventArgs e)
         {
-            if (TicketsdataGridView1.SelectedRows.Count>0)
+            if (TicketsdataGridView1.SelectedRows.Count > 0)
             {
-                bool eliminado = await cliente.EliminarAsync(TicketsdataGridView1.CurrentRow.Cells["Nombre_Cliente"].Value.ToString());
+                bool eliminado = await cliente.EliminarAsync(TicketsdataGridView1.CurrentRow.Cells["Codigo_Cliente"].Value.ToString());
                 if (eliminado)
                 {
                     LlenarDataGrid();
@@ -60,5 +57,16 @@ namespace Examen2_Manuel_Figueroa_20201001811
         {
 
         }
+
+        private void Tickets_Load(object sender, EventArgs e)
+        {
+            LlenarDataGrid();
+        }
+
+        private void TicketsFrom_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
