@@ -55,5 +55,10 @@ namespace Examen2_Manuel_Figueroa_20201001811
 
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

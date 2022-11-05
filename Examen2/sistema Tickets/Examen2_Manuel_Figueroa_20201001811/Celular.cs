@@ -94,11 +94,11 @@ namespace Examen2_Manuel_Figueroa_20201001811
 
             if (inserto)
             {
-                MessageBox.Show("Ticket generado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("cliente guardado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Ticket no se genero", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("cliente no guardado", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
