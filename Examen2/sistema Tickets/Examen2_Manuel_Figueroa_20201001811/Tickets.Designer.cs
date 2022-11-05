@@ -32,9 +32,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.TicketsdataGridView1 = new System.Windows.Forms.DataGridView();
             this.BtnMenu = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TicketsdataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -69,6 +69,7 @@
             this.button2.Text = "Eliminar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -80,13 +81,13 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Buscar";
             // 
-            // dataGridView1
+            // TicketsdataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 60);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 378);
-            this.dataGridView1.TabIndex = 4;
+            this.TicketsdataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TicketsdataGridView1.Location = new System.Drawing.Point(12, 60);
+            this.TicketsdataGridView1.Name = "TicketsdataGridView1";
+            this.TicketsdataGridView1.Size = new System.Drawing.Size(776, 378);
+            this.TicketsdataGridView1.TabIndex = 4;
             // 
             // BtnMenu
             // 
@@ -106,9 +107,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BtnMenu);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.TicketsdataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -117,7 +119,7 @@
             this.Name = "Tickets";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tickets";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TicketsdataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,7 +131,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView TicketsdataGridView1;
         private System.Windows.Forms.Button BtnMenu;
     }
 }

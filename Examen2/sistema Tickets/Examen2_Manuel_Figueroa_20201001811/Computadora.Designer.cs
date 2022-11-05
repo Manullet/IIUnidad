@@ -28,20 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Computadora));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.TxtTelefono = new System.Windows.Forms.TextBox();
+            this.TxtSopor = new System.Windows.Forms.TextBox();
+            this.TxtPrecio = new System.Windows.Forms.TextBox();
+            this.TxtSoli = new System.Windows.Forms.TextBox();
+            this.BtnGuardar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.BtnMenu = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -99,54 +102,55 @@
             this.label6.TabIndex = 3;
             this.label6.Text = "Tipo de Soporte";
             // 
-            // textBox1
+            // TxtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 20);
-            this.textBox1.TabIndex = 5;
+            this.TxtNombre.Location = new System.Drawing.Point(136, 32);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(129, 20);
+            this.TxtNombre.TabIndex = 5;
             // 
-            // textBox2
+            // TxtTelefono
             // 
-            this.textBox2.Location = new System.Drawing.Point(93, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(114, 20);
-            this.textBox2.TabIndex = 6;
+            this.TxtTelefono.Location = new System.Drawing.Point(93, 61);
+            this.TxtTelefono.Name = "TxtTelefono";
+            this.TxtTelefono.Size = new System.Drawing.Size(114, 20);
+            this.TxtTelefono.TabIndex = 6;
             // 
-            // textBox3
+            // TxtSopor
             // 
-            this.textBox3.Location = new System.Drawing.Point(136, 93);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(129, 20);
-            this.textBox3.TabIndex = 7;
+            this.TxtSopor.Location = new System.Drawing.Point(136, 93);
+            this.TxtSopor.Name = "TxtSopor";
+            this.TxtSopor.Size = new System.Drawing.Size(129, 20);
+            this.TxtSopor.TabIndex = 7;
             // 
-            // textBox4
+            // TxtPrecio
             // 
-            this.textBox4.Location = new System.Drawing.Point(77, 269);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 8;
+            this.TxtPrecio.Location = new System.Drawing.Point(77, 269);
+            this.TxtPrecio.Name = "TxtPrecio";
+            this.TxtPrecio.Size = new System.Drawing.Size(100, 20);
+            this.TxtPrecio.TabIndex = 8;
             // 
-            // textBox5
+            // TxtSoli
             // 
-            this.textBox5.Location = new System.Drawing.Point(28, 147);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(288, 110);
-            this.textBox5.TabIndex = 9;
+            this.TxtSoli.Location = new System.Drawing.Point(28, 147);
+            this.TxtSoli.Multiline = true;
+            this.TxtSoli.Name = "TxtSoli";
+            this.TxtSoli.Size = new System.Drawing.Size(288, 110);
+            this.TxtSoli.TabIndex = 9;
             // 
-            // button1
+            // BtnGuardar
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Image = global::Examen2_Manuel_Figueroa_20201001811.Properties.Resources.Save_37110;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(217, 269);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(63, 53);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Guardar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnGuardar.Image = global::Examen2_Manuel_Figueroa_20201001811.Properties.Resources.Save_37110;
+            this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BtnGuardar.Location = new System.Drawing.Point(217, 269);
+            this.BtnGuardar.Name = "BtnGuardar";
+            this.BtnGuardar.Size = new System.Drawing.Size(63, 53);
+            this.BtnGuardar.TabIndex = 10;
+            this.BtnGuardar.Text = "Guardar";
+            this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -159,6 +163,7 @@
             this.button2.Text = "Cancelar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // BtnMenu
             // 
@@ -173,6 +178,10 @@
             this.BtnMenu.UseVisualStyleBackColor = true;
             this.BtnMenu.Click += new System.EventHandler(this.BtnMenu_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Computadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,12 +191,12 @@
             this.ClientSize = new System.Drawing.Size(736, 336);
             this.Controls.Add(this.BtnMenu);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.BtnGuardar);
+            this.Controls.Add(this.TxtSoli);
+            this.Controls.Add(this.TxtPrecio);
+            this.Controls.Add(this.TxtSopor);
+            this.Controls.Add(this.TxtTelefono);
+            this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
@@ -198,6 +207,7 @@
             this.Name = "Computadora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Computadora";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,13 +220,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox TxtNombre;
+        private System.Windows.Forms.TextBox TxtTelefono;
+        private System.Windows.Forms.TextBox TxtSopor;
+        private System.Windows.Forms.TextBox TxtPrecio;
+        private System.Windows.Forms.TextBox TxtSoli;
+        private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button BtnMenu;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

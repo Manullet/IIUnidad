@@ -28,20 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Celular));
             this.BtnMenu = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtSoli = new System.Windows.Forms.TextBox();
+            this.TxtPrecio = new System.Windows.Forms.TextBox();
+            this.TxtSopor = new System.Windows.Forms.TextBox();
+            this.TxtTelefono = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnMenu
@@ -68,6 +71,7 @@
             this.button2.Text = "Cancelar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -81,42 +85,43 @@
             this.button1.Text = "Guardar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox5
+            // TxtSoli
             // 
-            this.textBox5.Location = new System.Drawing.Point(16, 147);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(288, 110);
-            this.textBox5.TabIndex = 22;
+            this.TxtSoli.Location = new System.Drawing.Point(16, 147);
+            this.TxtSoli.Multiline = true;
+            this.TxtSoli.Name = "TxtSoli";
+            this.TxtSoli.Size = new System.Drawing.Size(288, 110);
+            this.TxtSoli.TabIndex = 22;
             // 
-            // textBox4
+            // TxtPrecio
             // 
-            this.textBox4.Location = new System.Drawing.Point(63, 269);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 21;
+            this.TxtPrecio.Location = new System.Drawing.Point(63, 269);
+            this.TxtPrecio.Name = "TxtPrecio";
+            this.TxtPrecio.Size = new System.Drawing.Size(100, 20);
+            this.TxtPrecio.TabIndex = 21;
             // 
-            // textBox3
+            // TxtSopor
             // 
-            this.textBox3.Location = new System.Drawing.Point(124, 93);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(129, 20);
-            this.textBox3.TabIndex = 20;
+            this.TxtSopor.Location = new System.Drawing.Point(124, 93);
+            this.TxtSopor.Name = "TxtSopor";
+            this.TxtSopor.Size = new System.Drawing.Size(129, 20);
+            this.TxtSopor.TabIndex = 20;
             // 
-            // textBox2
+            // TxtTelefono
             // 
-            this.textBox2.Location = new System.Drawing.Point(81, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(114, 20);
-            this.textBox2.TabIndex = 19;
+            this.TxtTelefono.Location = new System.Drawing.Point(81, 61);
+            this.TxtTelefono.Name = "TxtTelefono";
+            this.TxtTelefono.Size = new System.Drawing.Size(114, 20);
+            this.TxtTelefono.TabIndex = 19;
             // 
-            // textBox1
+            // TxtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(124, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 20);
-            this.textBox1.TabIndex = 18;
+            this.TxtNombre.Location = new System.Drawing.Point(124, 34);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(129, 20);
+            this.TxtNombre.TabIndex = 18;
             // 
             // label5
             // 
@@ -173,6 +178,10 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Nombre Cliente";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Celular
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,11 +192,11 @@
             this.Controls.Add(this.BtnMenu);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtSoli);
+            this.Controls.Add(this.TxtPrecio);
+            this.Controls.Add(this.TxtSopor);
+            this.Controls.Add(this.TxtTelefono);
+            this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
@@ -199,6 +208,8 @@
             this.Name = "Celular";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Celular";
+            this.Load += new System.EventHandler(this.Celular_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,15 +220,16 @@
         private System.Windows.Forms.Button BtnMenu;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtSoli;
+        private System.Windows.Forms.TextBox TxtPrecio;
+        private System.Windows.Forms.TextBox TxtSopor;
+        private System.Windows.Forms.TextBox TxtTelefono;
+        private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

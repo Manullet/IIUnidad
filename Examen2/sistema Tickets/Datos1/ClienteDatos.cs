@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,6 +49,56 @@ namespace Datos1
             return inserto;
         }
 
+        public async Task<DataTable> DevolverListaAsync()
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                string sql = "SELECT * FROM cliente";
+                using (MySqlConnection _conexion = new MySqlConnection(Conexion.Cadena))
+                {
+                    await _conexion.OpenAsync();
+                    using (MySqlCommand comando = new MySqlCommand(sql, _conexion))
+                    {
+                        comando.CommandType = System.Data.CommandType.Text;
+                        MySqlDataReader dr = (MySqlDataReader)await comando.ExecuteReaderAsync();
+                        dt.Load(dr);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+
+            }
+            return dt;
+        }
+
+        public async Task<bool> EliminarAsync(string nombre)
+        {
+            bool elimino = false;
+            try
+            {
+                string sql = "DELETE FREOM cliente WHERE Nombre_Cliente=@Nombre_Cliente;";
+
+                using (MySqlConnection _conexion = new MySqlConnection(Conexion.Cadena))
+                {
+                    await _conexion.OpenAsync();
+                    using (MySqlCommand comando = new MySqlCommand(sql, _conexion))
+                    {
+                        comando.CommandType = System.Data.CommandType.Text;
+                        comando.Parameters.Add("@Nombre_Cliente", MySqlDbType.VarChar, 45).Value = nombre;
+                        await comando.ExecuteNonQueryAsync();
+                        elimino = true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            return elimino;
+        }
 
     }
 }

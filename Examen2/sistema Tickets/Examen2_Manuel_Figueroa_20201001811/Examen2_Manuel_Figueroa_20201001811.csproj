@@ -209,6 +209,10 @@
       <Project>{4E86AFBD-6142-4CCD-935C-2A05358347D4}</Project>
       <Name>Datos1</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{789224AB-D30D-48D5-B0AC-B0E27A25499C}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Ticket.png" />
