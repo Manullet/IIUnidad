@@ -77,6 +77,7 @@
             this.TxtBoxClave.Name = "TxtBoxClave";
             this.TxtBoxClave.Size = new System.Drawing.Size(222, 20);
             this.TxtBoxClave.TabIndex = 3;
+            this.TxtBoxClave.UseSystemPasswordChar = true;
             // 
             // BtnAceptar
             // 

@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TicketsdataGridView1 = new System.Windows.Forms.DataGridView();
             this.BtnMenu = new System.Windows.Forms.Button();
+            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             ((System.ComponentModel.ISupportInitialize)(this.TicketsdataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,6 +106,13 @@
             this.BtnMenu.UseVisualStyleBackColor = true;
             this.BtnMenu.Click += new System.EventHandler(this.BtnMenu_Click);
             // 
+            // mySqlCommand1
+            // 
+            this.mySqlCommand1.CacheAge = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.EnableCaching = false;
+            this.mySqlCommand1.Transaction = null;
+            // 
             // Tickets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,5 +145,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView TicketsdataGridView1;
         private System.Windows.Forms.Button BtnMenu;
+        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
     }
 }
