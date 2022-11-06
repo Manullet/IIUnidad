@@ -53,8 +53,20 @@ namespace Examen2_Manuel_Figueroa_20201001811
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
+            bool valido = await (cliente.BuscarCliente(TxtBuscar.Text));
+
+            if (valido)
+            {
+                TicketsdataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                LlenarDataGrid();
+            }
+            else
+            {
+                MessageBox.Show("NO se encontro cliente ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
 
         }
 
@@ -63,10 +75,9 @@ namespace Examen2_Manuel_Figueroa_20201001811
             LlenarDataGrid();
         }
 
-        private void TicketsFrom_Load(object sender, EventArgs e)
-        {
 
-        }
+
+        
 
     }
 }

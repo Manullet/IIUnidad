@@ -44,6 +44,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.TxtRespuesta = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +55,7 @@
             // 
             this.BtnMenu.Image = global::Examen2_Manuel_Figueroa_20201001811.Properties.Resources.Logout_37127;
             this.BtnMenu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnMenu.Location = new System.Drawing.Point(495, 12);
+            this.BtnMenu.Location = new System.Drawing.Point(538, 12);
             this.BtnMenu.Name = "BtnMenu";
             this.BtnMenu.Size = new System.Drawing.Size(63, 53);
             this.BtnMenu.TabIndex = 25;
@@ -64,7 +68,7 @@
             // 
             this.button2.Image = global::Examen2_Manuel_Figueroa_20201001811.Properties.Resources.receipt_cancel_icon_177356;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(282, 261);
+            this.button2.Location = new System.Drawing.Point(286, 430);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(63, 53);
             this.button2.TabIndex = 24;
@@ -78,7 +82,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.Image = global::Examen2_Manuel_Figueroa_20201001811.Properties.Resources.Save_37110;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(201, 262);
+            this.button1.Location = new System.Drawing.Point(205, 431);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(63, 53);
             this.button1.TabIndex = 23;
@@ -97,10 +101,11 @@
             // 
             // TxtPrecio
             // 
-            this.TxtPrecio.Location = new System.Drawing.Point(63, 269);
+            this.TxtPrecio.Location = new System.Drawing.Point(67, 452);
             this.TxtPrecio.Name = "TxtPrecio";
             this.TxtPrecio.Size = new System.Drawing.Size(100, 20);
             this.TxtPrecio.TabIndex = 21;
+            this.TxtPrecio.TextChanged += new System.EventHandler(this.TxtPrecio_TextChanged);
             // 
             // TxtSopor
             // 
@@ -128,7 +133,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 268);
+            this.label5.Location = new System.Drawing.Point(16, 451);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 19);
             this.label5.TabIndex = 17;
@@ -182,13 +187,54 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 260);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(166, 19);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Descripcion de Respuesta";
+            // 
+            // TxtRespuesta
+            // 
+            this.TxtRespuesta.Location = new System.Drawing.Point(16, 282);
+            this.TxtRespuesta.Multiline = true;
+            this.TxtRespuesta.Name = "TxtRespuesta";
+            this.TxtRespuesta.Size = new System.Drawing.Size(288, 110);
+            this.TxtRespuesta.TabIndex = 27;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(98, 404);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(206, 20);
+            this.dateTimePicker1.TabIndex = 28;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(33, 406);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(46, 19);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "Fecha";
+            // 
             // Celular
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Examen2_Manuel_Figueroa_20201001811.Properties.Resources.image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(570, 324);
+            this.ClientSize = new System.Drawing.Size(615, 496);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.TxtRespuesta);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.BtnMenu);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -231,5 +277,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox TxtRespuesta;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -43,6 +43,8 @@ namespace Examen2_Manuel_Figueroa_20201001811
             TxtSopor.Text = string.Empty;
             TxtTelefono.Text = string.Empty;
             TxtPrecio.Text= string.Empty;
+            TxtRespuesta.Text = string.Empty;
+            dateTimePicker1.Value = DateTime.Now;
             Desactivar();
         }
 
@@ -54,6 +56,8 @@ namespace Examen2_Manuel_Figueroa_20201001811
             TxtSopor.Enabled = false;
             TxtTelefono.Enabled = false;
             TxtPrecio.Enabled = false;
+            TxtRespuesta.Enabled = false;
+            dateTimePicker1.Enabled = false;
         }
 
         private async void button1_Click(object sender, EventArgs e)
@@ -84,22 +88,43 @@ namespace Examen2_Manuel_Figueroa_20201001811
                 return;
             }
 
+            if (string.IsNullOrEmpty(TxtRespuesta.Text))
+            {
+                errorProvider1.SetError(TxtRespuesta, "Ingrese su respuesta");
+                TxtRespuesta.Focus();
+                return;
+            }
+            if (string.IsNullOrEmpty(dateTimePicker1.Text))
+            {
+                errorProvider1.SetError(dateTimePicker1, "Ingrese la fecha");
+                dateTimePicker1.Focus();
+                return;
+            }
+
+
             clientesE.Nombre_Cliente = TxtNombre.Text;
             clientesE.Desc_soli = TxtSoli.Text;
             clientesE.Tipo_so = TxtSopor.Text;
             clientesE.Telefono = Convert.ToInt32(TxtTelefono.Text);
             clientesE.Precio = Convert.ToInt32(TxtPrecio.Text);
+            clientesE.Descripcion = TxtRespuesta.Text;
+            clientesE.Fecha = dateTimePicker1.Value;
 
             bool inserto = await Clientesdato.insertarAsync(clientesE);
 
             if (inserto)
             {
-                MessageBox.Show("cliente guardado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ticket Guardado ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("cliente no guardado", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ticket no Guardado", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void TxtPrecio_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

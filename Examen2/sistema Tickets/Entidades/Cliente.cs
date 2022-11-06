@@ -14,6 +14,8 @@ namespace Entidades
         public string Desc_soli { get; set; }   
         public int Precio { get; set; }
         public string Tipo_so { get; set; }
+        public string Descripcion { get; set; }
+        public DateTime Fecha { get; set; }
 
 
 

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.TxtBuscar = new System.Windows.Forms.TextBox();
+            this.BtnBuscar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.TicketsdataGridView1 = new System.Windows.Forms.DataGridView();
@@ -37,26 +37,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.TicketsdataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // TxtBuscar
             // 
-            this.textBox1.Location = new System.Drawing.Point(72, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 20);
-            this.textBox1.TabIndex = 0;
+            this.TxtBuscar.Location = new System.Drawing.Point(72, 21);
+            this.TxtBuscar.Name = "TxtBuscar";
+            this.TxtBuscar.Size = new System.Drawing.Size(152, 20);
+            this.TxtBuscar.TabIndex = 0;
             // 
-            // button1
+            // BtnBuscar
             // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::Examen2_Manuel_Figueroa_20201001811.Properties.Resources.search_find_database_16703;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(230, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 40);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Buscar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnBuscar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscar.Image = global::Examen2_Manuel_Figueroa_20201001811.Properties.Resources.search_find_database_16703;
+            this.BtnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnBuscar.Location = new System.Drawing.Point(230, 14);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(94, 40);
+            this.BtnBuscar.TabIndex = 1;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -114,8 +114,8 @@
             this.Controls.Add(this.TicketsdataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.BtnBuscar);
+            this.Controls.Add(this.TxtBuscar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Tickets";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -129,8 +129,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox TxtBuscar;
+        private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView TicketsdataGridView1;

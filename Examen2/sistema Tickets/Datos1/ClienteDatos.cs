@@ -17,7 +17,7 @@ namespace Datos1
             try
             {
 
-                string sql = "INSERT INTO cliente VALUES (@Codigo_Cliente, @Nombre_cliente, @Telefono, @Desc_Solicitud, @Precio, @Tipo_Soporte );";
+                string sql = "INSERT INTO cliente VALUES (@Codigo_Cliente, @Nombre_cliente, @Telefono, @Desc_Solicitud, @Precio, @Tipo_Soporte,@Descripcion_Respuesta, @Fecha);";
 
                 using (MySqlConnection _conexion = new MySqlConnection(Conexion.Cadena))
                 {
@@ -32,6 +32,8 @@ namespace Datos1
                         comando.Parameters.Add("@Desc_Solicitud", MySqlDbType.VarChar, 100).Value = Clientes.Desc_soli;
                         comando.Parameters.Add("@Precio", MySqlDbType.Decimal, 8).Value = Clientes.Precio;
                         comando.Parameters.Add("@Tipo_Soporte", MySqlDbType.VarChar, 45).Value = Clientes.Tipo_so;
+                        comando.Parameters.Add("@Descripcion_Respuesta", MySqlDbType.VarChar,100).Value = Clientes.Descripcion;
+                        comando.Parameters.Add("@Fecha", MySqlDbType.DateTime).Value = Clientes.Fecha;
 
                         await comando.ExecuteNonQueryAsync();
                         inserto = true;
@@ -99,6 +101,45 @@ namespace Datos1
             }
             return elimino;
         }
+
+
+        public async Task<bool> BuscarCliente(string Nombre)
+        {
+
+            bool valido = false;
+            try
+            {
+                string sql = "SELECT 1 FROM cliente WHERE Nombre_cliente=@Nombre_cliente ;";
+
+                using (MySqlConnection _conexion = new MySqlConnection(Conexion.Cadena))
+                {
+                    await _conexion.OpenAsync();
+                    using (MySqlCommand comando = new MySqlCommand(sql, _conexion))
+                    {
+                        comando.CommandType = System.Data.CommandType.Text;
+                        comando.Parameters.Add("@Nombre_cliente", MySqlDbType.VarChar, 45).Value = Nombre;
+                        
+
+                        valido = Convert.ToBoolean(await comando.ExecuteScalarAsync());
+
+
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+
+            }
+            return valido;
+
+        }
+
+
+
+
+
 
     }
 }

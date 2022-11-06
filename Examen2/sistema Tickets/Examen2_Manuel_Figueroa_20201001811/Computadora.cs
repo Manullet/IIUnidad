@@ -37,6 +37,8 @@ namespace Examen2_Manuel_Figueroa_20201001811
             TxtSoli.Text=string.Empty;  
             TxtSopor.Text=string.Empty;
             TxtTelefono.Text=string.Empty;
+            TxtRespuesta.Text=string.Empty; 
+            dateTimePicker1.Value=DateTime.Now;
             Desactivar();
         }
 
@@ -57,14 +59,26 @@ namespace Examen2_Manuel_Figueroa_20201001811
             }
             if (string.IsNullOrEmpty(TxtSopor.Text))
             {
-                errorProvider1.SetError(TxtSopor, "Ingrese su solicitud");
+                errorProvider1.SetError(TxtSopor, "Ingrese el tipo de soporte");
                 TxtSopor.Focus();
                 return;
             }
             if (string.IsNullOrEmpty(TxtTelefono.Text))
             {
-                errorProvider1.SetError(TxtTelefono, "Ingrese su solicitud");
+                errorProvider1.SetError(TxtTelefono, "Ingrese su Telefono");
                 TxtTelefono.Focus();
+                return;
+            }
+            if (string.IsNullOrEmpty(TxtRespuesta.Text))
+            {
+                errorProvider1.SetError(TxtRespuesta, "Ingrese su respuesta");
+                TxtRespuesta.Focus();
+                return;
+            }
+            if (string.IsNullOrEmpty(dateTimePicker1.Text))
+            {
+                errorProvider1.SetError(dateTimePicker1, "Ingrese la fecha");
+                dateTimePicker1.Focus();
                 return;
             }
 
@@ -73,16 +87,18 @@ namespace Examen2_Manuel_Figueroa_20201001811
             clientesE.Tipo_so=TxtSopor.Text;
             clientesE.Telefono = Convert.ToInt32(TxtTelefono.Text);
             clientesE.Precio = Convert.ToInt32(TxtPrecio.Text);
+            clientesE.Descripcion=TxtRespuesta.Text;
+            clientesE.Fecha=dateTimePicker1.Value;
 
             bool inserto = await Clientesdato.insertarAsync(clientesE);
 
             if (inserto)
             {
-                MessageBox.Show("cliente no guardado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ticket Guardado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("cliente no guardado", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ticket no Guardado", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -101,6 +117,9 @@ namespace Examen2_Manuel_Figueroa_20201001811
             TxtSoli.Enabled=false;
             TxtSopor.Enabled=false;
             TxtTelefono.Enabled=false;
+            TxtRespuesta.Enabled=false;
+            dateTimePicker1.Enabled=false;
+
         }
 
         
