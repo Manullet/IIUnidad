@@ -59,12 +59,13 @@ namespace Examen2_Manuel_Figueroa_20201001811
 
             if (valido)
             {
+                
                 TicketsdataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 LlenarDataGrid();
             }
             else
             {
-                MessageBox.Show("NO se encontro cliente ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No se encontro cliente ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
