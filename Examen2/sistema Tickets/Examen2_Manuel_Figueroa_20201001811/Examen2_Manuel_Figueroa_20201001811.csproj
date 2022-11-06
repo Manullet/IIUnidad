@@ -172,12 +172,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\LOGIN.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\LOGIN.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\login3.jpeg" />
   </ItemGroup>
   <ItemGroup>
@@ -185,15 +179,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delete_delete_deleteusers_delete_male_user_maleclient_2348 %282%29.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\soporte-tecnico-menu.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menu.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menu2.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\munu3.jpg" />

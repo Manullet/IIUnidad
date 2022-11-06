@@ -1,1 +1,12 @@
-SELECT * FROM `examen-2`.usuario;
+SELECT * FROM `examen-2`.cliente;
+
+
+
+
+
+
+
+
+
+
+
