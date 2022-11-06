@@ -1,1 +1,0 @@
-SELECT * FROM examen_2.cliente;
